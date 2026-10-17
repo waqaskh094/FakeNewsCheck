@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Dark mode is toggled by adding the "dark" class to <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* The confidence bar width is built at runtime (w-[93%]), so generate all of them */
+@source inline("w-[{0..100}%]");
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Dark surfaces */
+  --color-ink-950: #0c0f14;
+  --color-ink-900: #10141a;
+  --color-ink-800: #171c24;
+  --color-ink-700: #232a35;
+  --color-ink-500: #5d6878;
+  --color-ink-400: #8b95a5;
+  --color-ink-300: #aab3c0;
+  --color-ink-100: #e6e9ee;
+    /* Light mode: darker page background and stronger borders */
+  --color-slate-100: #e2e8f0;
+  --color-slate-200: #cbd5e1;
+  --color-slate-300: #a3b0c2;
+}
